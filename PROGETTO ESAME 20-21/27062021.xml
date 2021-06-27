@@ -111,28 +111,29 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 					<msIdentifier>
 						<country>Switzerland</country>
 						<settlement>Genève</settlement>
-						<repository type="library" ref="https://archives.bge-geneve.ch/archives/archives/fonds/saussure_ferdinand_de/view:5892/n:89" n="CH-BGE">Bibliothèque de Genève</repository> <!-- lasciato @n perché era nell'esempio Bellini, ma ha senso? -->
+						<repository role="library" ref="https://archives.bge-geneve.ch/archives/archives/fonds/saussure_ferdinand_de/view:5892/n:89" n="CH-BGE">Bibliothèque de Genève</repository> <!-- lasciato @n perché era nell'esempio Bellini, ma ha senso? -->
 						<collection>Archives Ferdinand de Saussure</collection> <!-- RICONTROLLARE INSIEME DIFFERENZA INSTITUTION - REPOSITORY - COLLECTION -->
-						<idno type="inventory" ref="https://archives.bge-geneve.ch/ark:/17786/vta9cfd3fc17efc113d/dao/0/layout:linear#id:258454482?gallery=true&center=2016.000,-2697.000&zoom=3&rotation=0.000">Ms. fr. 3951/7</idno> <!-- segnatura del manoscritto di Morfologie. VOLEVO INSERIRE IL LINK ALLA PAGINA ONLINE MA CONTIENE CARATTERE SPECIALE & (credo darà problemi in fase di validazione) -->
+						<idno type="inventory">Ms. fr. 3951/7</idno> <!-- segnatura del manoscritto di Morfologie. VOLEVO INSERIRE IL LINK ALLA PAGINA ONLINE ma dà errore (ref="https://archives.bge-geneve.ch/ark:/17786/vta9cfd3fc17efc113d") -->
 						<altIdentifier><idno type="ARK">ark:/17786/vta9cfd3fc17efc113d</idno></altIdentifier> <!-- non sono sicura di ARK, ma sul sito della BGE c'è -->
 					</msIdentifier>
 
 					<msContents>
-						<msItem> <!-- msItem è davvero necessario? in realtà c'è un solo item... -->
-							<summary>Il manoscritto contiene il testo di <title>Morfologie</title> di <author>Ferdinand de Saussure</author>. 
+						<summary><p>Il manoscritto contiene il testo di Morfologie di Ferdinand de Saussure. 
 							Testo preparatorio per almeno tre lezioni (la terza é indicata da Saussure ai paragrafi 5 e 6. 
 							Il testo contiene la redazione finale, ricopiata in bella, con correzioni, e ordinato in sequenza da Saussure 
-							(bella copia BGE Ms fr. 3951/7 pp. 1-24) e conserva anche la versione precedente (brutta copia Ms. fr. 3951/7 pp 25-33).
-							</summary> <!-- HO PROVVISORIAMENTE COPIATO DAL PDF, DA RIVEDERE -->
-							<author xml:lang="fr">Ferdinand de Saussure</author><!-- INSERIRE REF (ache riga 23)? es: <author ref="TEI-ListPerson.xml#VB">Vincenzo Bellini</author> -->
-							<title type="uniform" xml:lang="fr">Morfologie</title> <!-- lasciato type="uniform" perché titolo in forma standard -->
-							<textLang mainLang="fr" otherLangs="lat" otherLangs="grc" otherLangs="goh" otherLangs="de" otherLangs="it">
+							(bella copia BGE Ms fr. 3951/7 pp. 1-24) e conserva anche la versione precedente (brutta copia Ms. fr. 3951/7 pp 25-33).</p>
+						</summary> <!-- HO PROVVISORIAMENTE COPIATO DAL PDF, DA RIVEDERE -->
+						<textLang mainLang="fr" otherLangs="lat grc goh de it">
 								La lingua principale è il francese (fr) di fine Ottocento, con abbreviazioni e termini tecnici.
 								Dal momento che il testo tratta argomenti di linguistica, esso contiene esempi e termini in più lingue,
 								tra cui l'antico greco (grc), il latino (lat), l'antico alto tedesco (goh), l'italiano (it).
 								<!-- N.B. per CATERINA: sicuramente tu sei più pratica di me nel campo linguistico, quindi ti cedo la revisione completa di questa parte. 
 								Le linee guida della TEI rimandano a 3WC, per approfondire l'argomento del tag linguistico: https://www.w3.org/International/questions/qa-choosing-language-tags.en -->
-							</textLang> <!-- cancellare poi sigle lingue, dedotte da: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry -->
+						</textLang> <!-- cancellare poi sigle lingue, dedotte da: http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry -->
+	
+						<msItem>
+							<author xml:lang="fr">Ferdinand de Saussure</author><!-- INSERIRE REF (ache riga 23)? es: <author ref="TEI-ListPerson.xml#VB">Vincenzo Bellini</author> -->
+							<title type="uniform" xml:lang="fr">Morfologie</title> <!-- lasciato type="uniform" perché titolo in forma standard -->
 						</msItem>
 					</msContents>
 
@@ -157,17 +158,6 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 									</dimensions>
 								</extent>
 
-								<collation>
-									<p>Fascicolo composto da 19 fogli che contengono testo sia sul recto sia sul verso (ad eccezione del primo, 
-										usato come copertina). Ogni bifoglio del fascicolo, ad eccezione di alcuni casi (i fogli numerati come
-										"15", "16" e "26/27"), è piegato a metà, a formare un bifoglio. Ciascun bifoglio è quindi formato 
-										da quattro pagine (carta 1 recro e verso, carta 2 recto e verso).
-										Il primo paragrafo è contenuto nel secondo bifoglio, nelle c. 1r, 1v (prima metà) e 2r (seconda metà);
-										nella c. 1v (seconda metà) inizia il secondo paragrafo, che continua nella c. 2r (prima metà);
-										nella c. 2v ci sono alcune righe del paragrafo 3.
-									</p>
-								</collation>
-
 								<foliation xml:id="original"> <!-- numerazione piccola con inchiostro -->
 									<p>La numerazione originale delle pagine è apposta nell'angolo superiore esterno della pagina, 
 										con lo stesso inchiostro del testo (a volte separata dal resto con tratto di penna o con circoletto,
@@ -182,6 +172,17 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 									<p>Alcune pagine presentano una numerazione a matita rossa, in posizione evidente accanto al testo;
 										la dimensione dei numeri è molto grande (ad esempio, nel secondo bifoglio, c. 2v, presente un "4").</p>		 
 								</foliation>
+								
+								<collation>
+									<p>Fascicolo composto da 19 fogli che contengono testo sia sul recto sia sul verso (ad eccezione del primo, 
+										usato come copertina). Ogni bifoglio del fascicolo, ad eccezione di alcuni casi (i fogli numerati come
+										"15", "16" e "26/27"), è piegato a metà, a formare un bifoglio. Ciascun bifoglio è quindi formato 
+										da quattro pagine (carta 1 recro e verso, carta 2 recto e verso).
+										Il primo paragrafo è contenuto nel secondo bifoglio, nelle c. 1r, 1v (prima metà) e 2r (seconda metà);
+										nella c. 1v (seconda metà) inizia il secondo paragrafo, che continua nella c. 2r (prima metà);
+										nella c. 2v ci sono alcune righe del paragrafo 3.
+									</p>
+								</collation>
 
 								<condition>
 									<p>il bifoglio che contiene il primo paragrafo di <title>Morfologie</title> è facilmente leggibile.
@@ -216,7 +217,7 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 						</bindingDesc>
 					</physDesc>
 
-					<hystory>
+					<history>
 						<origin>
 							<p>La data non indicata nel documento. Si suppone, dati i corsi di Saussure e il contenuto, che sia del periodo 1893-94, 
 								ma potrebbe anche essere del 1894-95.</p>
@@ -234,7 +235,7 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 								et Claude de Saussure.
 								En 2008, Madame Christine de Saussure a remis en don à la Bibliothèque quelques papiers de Ferdinand de Saussure.</p>
 						</acquisition>
-					</hystory>
+					</history>
 
 					<additional>
 						<adminInfo>
@@ -249,6 +250,7 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 
 		<profileDesc>
 			<abstract>
+				<p></p>
 				<!-- (TOGLIERE?) contains a summary or formal abstract prefixed to an existing source document by the encoder. -->
 			</abstract>
 			
@@ -297,6 +299,7 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 		</front>
 
   		<body>
+			  <p>
 
 		<lb/>1. La morphologie, dit-on, est l'étude des formes du langage, tandis
 	    <lb/>que la phonétique serait l'étude des sons du langage.
@@ -376,6 +379,7 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
     	<lb/>que dans les modifications de l'idée : <!--qui c'è un punto, non i due punti-->
     	<lb/>le barreau, <!--non c'è la virgola e queste due parole sono centrate e sottolineate entrambe-->
     	<lb/>αὔτως [greco]. 
+	</p>
     	</body>
     	<!--APPUNTI SPARSI:
     	STILISTICAMENTE A UNA PRIMA OCCHIATA NOTO L'USO DEI DUE PUNTI, DEL SOTTOLINEATO, DEI NUMERI IN CIFRE E DELLE ABBREVIAZIONI
