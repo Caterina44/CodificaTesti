@@ -290,6 +290,9 @@ rapporto immagine-testo (evidenziare la particolarità del nostro testo)
 			<change n="1" when="2021-06-27" who="#LM">
 				Inserimento metadati. Prima versione teiHeader.
 			</change>
+			<change n="2" when="2021-06-29" who="#LM">
+				Inserimento facsimile. Collegamento testo-immagini.
+			</change>
 		</revisionDesc>
     </teiHeader>
 
